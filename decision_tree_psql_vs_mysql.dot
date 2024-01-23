@@ -1,0 +1,39 @@
+digraph G {
+  node [shape = box;];
+  rankdir = TB;
+  
+  A [label = "Start";];
+  B [label = "Data complexity";];
+  C [label = "Performance needs";];
+  D [label = "Data integrity\nrequirements";];
+  E [label = "Ease of use";];
+  H [label = "Final decision";];
+  G [label = "Community and\necosystem";];
+  I [label = "PostgreSQL";];
+  J [label = "MySQL";];
+  L [label = "Both have large,\nactive communities\nand extensive resources";];
+  M [label = "Consider all factors and\nmake the best choice for your\nproject's specific needs";];
+  N [label = "Test both databases with\nyour application to determine\nthe best fit";];
+  O [label = "Both options are open-source,\nbut they also offer commercial\nsupport options";];
+  
+  // Invisible node for spacing
+  InvisibleNode [style = invisible;label = "";];
+  
+  A -> B;
+  B -> C [label = "Simple data\nstructures";];
+  B -> I [label = "Complex data models,\ngeospatial data, JSON support";];
+  C -> D [label = "High-speed reads,\nsimpler queries";];
+  C -> I [label = "Complex queries, large\ndatasets, high concurrency";];
+  D -> I [label = "Strict ACID compliance\nessential";];
+  D -> E [label = "Some flexibility\nacceptable";];
+  E -> J [label = "Prioritize user-friendliness\nand quick setup";];
+  E -> I [label = "Comfortable with a steeper\nlearning curve";];
+  H -> M;
+  H -> N;
+  G -> L;
+  G -> O;
+  
+  // Invisible edges for layout
+  H -> InvisibleNode [style = invis;];
+  InvisibleNode -> G [style = invis;];
+}
