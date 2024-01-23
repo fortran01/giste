@@ -7,9 +7,16 @@ graph TD
     C{Performance needs}
     D{Data integrity requirements}
     E{Ease of use}
+    F{Licensing}
+    G{Community and ecosystem}
+    H{Final decision}
     I[PostgreSQL]
     J[MySQL]
-
+    L[Both have large, active communities and extensive resources]
+    M[Consider all factors and make the best choice for your project's specific needs]
+    N[Test both databases with your application to determine the best fit]
+    O[Both options are open-source, but they also offer commercial support options]
+    
     A --> B
     B -->|Simple data structures| C
     B -->|Complex data models, geospatial data, JSON support| I
@@ -19,29 +26,8 @@ graph TD
     D -->|Some flexibility acceptable| E
     E -->|Prioritize user-friendliness and quick setup| J
     E -->|Comfortable with a steeper learning curve| I
-```
-
-```mermaid
-graph TD
-    G[Community and ecosystem]
-    L[Both have large, active communities and extensive resources]
     G --> L
-```
-
-```mermaid
-graph TD
-    F[Licensing]
-    K[Both MySQL and PostgreSQL are open-source]
-    O[Both have commercial support options]
-    F --> K
-    F --> O
-```
-
-```mermaid
-graph TD
-    H[Final decision]
-    M[Consider all factors and make the best choice for your project's specific needs]
-    N[Test both databases with your application to determine the best fit]
+    G --> O
     H --> M
     H --> N
 ```
