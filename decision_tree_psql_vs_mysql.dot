@@ -1,3 +1,8 @@
+// This diagram is a decision tree to help choose between PostgreSQL and MySQL databases.
+// It considers various factors such as data complexity, performance needs, data integrity requirements,
+// ease of use, and the community and ecosystem surrounding each database.
+// The tree leads to a final decision where one can choose PostgreSQL, MySQL, or consider additional factors
+// and testing to make the best choice for their specific project needs.
 digraph G {
   node [shape = box;];
   rankdir = TB;
