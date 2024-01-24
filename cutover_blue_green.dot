@@ -1,0 +1,28 @@
+digraph bluegreen {
+  // Set graph layout to left-to-right
+  rankdir = LR;
+  
+  // Nodes with adjusted spacing
+  node [shape = record; height = 2;];
+  // Increased height for better field spacing
+  margin = 0.15;
+  // Added a small margin for visual clarity
+  
+  blue [label = "Blue Environment\n(Current Production)";];
+  green [label = "Green Environment\n(AWS deployment)";];
+  
+  // Traffic flow with clear labels and colors
+  blue -> green [label = "Test Traffic"; color = orange;];
+  blue -> green [label = "Cutover"; color = red;];
+  green -> blue [label = "Rollback (if needed)"; color = red; style = dotted;];
+  
+  // Optional clusters with descriptive labels
+  subgraph cluster_blue {
+    label = "Stable Version (Blue)";
+    blue;
+  }
+  subgraph cluster_green {
+    label = "New Version (Green)";
+    green;
+  }
+}
