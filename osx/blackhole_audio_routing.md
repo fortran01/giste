@@ -23,6 +23,12 @@ The Multi-Output Device is created to combine BlackHole and the External Microph
    - Add External Microphone, choose this as the primary device, don't enable drift compensation for this one
    - Right-click on the Multi-Output Device and select "Add Output Device"
 
+Tidbits on drift compensation and clock source:
+
+- Drift compensation: Used to synchronize audio streams from different devices, preventing audio drift over time.
+- Not enabled for primary device: The primary device (External Microphone) acts as the master clock, so it doesn't need compensation.
+- Clock source set to primary device: Ensures all other devices sync to the External Microphone's timing, maintaining consistent audio across all sources.
+
 ## Create Aggregate Device
 
 Recall an aggregate device is a device that has multiple inputs and outputs. The Aggregate Device combines the microphone and BlackHole inputs
